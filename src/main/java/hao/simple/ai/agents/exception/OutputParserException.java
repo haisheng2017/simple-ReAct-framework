@@ -1,6 +1,5 @@
 package hao.simple.ai.agents.exception;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter

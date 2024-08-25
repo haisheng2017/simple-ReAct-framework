@@ -16,4 +16,4 @@ Final Answer: the final answer to the original input question
 Begin!
 
 Question: {input}
-Thought:{agent_scratchpad}
+{agent_scratchpad}
