@@ -16,8 +16,21 @@ mistral:v3（langchain用的openai，我觉得openai应该也可以）是大部�
 - 一些令人生气的 corner case，有一些场景，LLM会吐出不按照格式的文本，导致程序产生异常，这个似乎只能case by case，否则只能让用户输入下一次文本
 - 单页应用，通过web socket，也许可能用netty实现
 
+# 运行
+Java 17及以上 Maven 3.9
+
+## IDE
+直接定位 hao.simple.ai.cmd.App
+点击按钮运行
+
+## Jar
+运行打包指令 mvn clean package
+java -jar xxx-jar-with-dependencies.jar
+
 # 示例
 以mistral为为运行示例，每个问题是互不影响的，这个prompt能够比较好的处理: 是什么，怎么样，为什么
+
+但如果你问它，how are you，可能就会出现意外，这应该取决于topk和topp的配置，太有想象力可能也不好
 
 ## 是什么（what）
 可以看到预先准备的问题答案，它能够理解，但是不知道，它能够回答不知道
