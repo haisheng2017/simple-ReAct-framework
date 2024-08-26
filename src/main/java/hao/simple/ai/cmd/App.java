@@ -22,7 +22,7 @@ public class App {
                 .toolDefinition(map -> engine.lookup(map.get("args").toString()))
                 .build());
         Scanner in = new Scanner(System.in);
-        System.out.println("Start your chat.");
+        System.out.println("Input your question, or type 'q' to exit.");
         while (true) {
             System.out.print("You: ");
             String instruction = in.nextLine();
