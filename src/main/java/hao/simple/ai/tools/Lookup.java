@@ -17,6 +17,6 @@ public class Lookup {
         if (q.contains("langchain")) {
             return "LangChain is an open source orchestration framework for building applications using large language models (LLMs) like chatbots and virtual agents. It was launched by Harrison Chase in October 2022 and has gained popularity as the fastest-growing open source project on Github in June 2023.";
         }
-        return UUID.randomUUID().toString();
+        return "Sorry, we don't find any relative information.";
     }
 }
