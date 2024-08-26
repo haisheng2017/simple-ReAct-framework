@@ -13,13 +13,13 @@ import java.util.Scanner;
  */
 public class App {
     public static void main(String[] args) throws OllamaBaseException, IOException, InterruptedException {
-        String host = "http://192.168.1.14:11434/";
+        String host = "http://localhost:11434/";
         OllamaAgent agent = new OllamaAgent(host, 600L);
         Lookup engine = new Lookup();
         agent.addTool(Tools.ToolSpecification.builder()
                 .functionDescription("This tool is used for search")
                 .functionName("search")
-                .toolDefinition(map -> engine.lookup())
+                .toolDefinition(map -> engine.lookup(map.get("args").toString()))
                 .build());
         Scanner in = new Scanner(System.in);
         System.out.println("Start your chat.");
